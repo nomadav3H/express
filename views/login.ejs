@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--
+         * @section head
+         * 
+         * The head section of the HTML document.
+         * 
+         * @meta charset="utf-8" - Specifies the character encoding for the document.
+         * @meta name="viewport" content="width=device-width, minimum-scale=1" - Ensures the page is responsive on different devices.
+         * @title Login - Sets the title of the page displayed in the browser tab.
+         * @link href="/style.css" rel="stylesheet" type="text/css" - Links to the external CSS stylesheet.
+         -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1">
+        <title>Login</title>
+        <link href="/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <!--
+         * @section logo
+         * 
+         * Displays the logo of the application.
+         * 
+         * @div align="center" - Center-aligns the content.
+         * @img width="100" src="/assets/logo.png" - Displays the logo image.
+         -->
+        <div align="center">
+            <br>
+            <img width="100" src="/assets/logo.png" alt="Logo">
+        </div>
+
+        <!--
+         * @section login-form
+         * 
+         * Container for the login form.
+         * 
+         * @div class="login" - Container for the login form with specific styling.
+         * @h1 - Heading for the login section.
+         * @form action="/login" method="post" - Form element for user login.
+         * @label for="username" - Label for the username input field.
+         * @input type="text" id="username" name="username" required - Input field for username.
+         * @label for="password" - Label for the password input field.
+         * @input type="password" id="password" name="password" required - Input field for password.
+         * @button class="update" type="submit" - Submit button for the form.
+         -->
+        <div class="login" align="center">
+            <h1>Login</h1>
+            <form action="/login" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <button class="update" type="submit">Login</button>
+            </form>
+        </div>
+    </body>
+</html>

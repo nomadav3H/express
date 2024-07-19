@@ -1,0 +1,432 @@
+/**
+ * Global styles applied to all elements.
+ *
+ * Sets the box-sizing model to border-box and specifies a font stack.
+ * 
+ * @selector * 
+ * @property {box-sizing} box-sizing - Sets the box-sizing model to border-box.
+ * @property {font-family} font-family - Sets the font stack for the application.
+ * @property {font-size} font-size - Sets the font size to 16px.
+ */
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+    font-size: 16px;
+}
+
+/**
+ * Styles for the login container.
+ *
+ * Defines dimensions, background color, box shadow, margin, padding, and border radius.
+ * 
+ * @selector .login
+ * @property {width} width - Sets the width of the login container to 500px.
+ * @property {background-color} background-color - Sets the background color to #ffffff.
+ * @property {box-shadow} box-shadow - Applies a shadow effect around the container.
+ * @property {margin} margin - Sets the margin to 50px auto.
+ * @property {padding} padding - Sets the padding to 20px.
+ * @property {border-radius} border-radius - Applies a border radius of 2%.
+ */
+.login {
+    width: 500px;
+    background-color: #ffffff;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 2%;
+}
+
+/**
+ * Styles for images within the application.
+ *
+ * Applies a circular border radius to images.
+ * 
+ * @selector img
+ * @property {border-radius} border-radius - Applies a circular border radius.
+ */
+img {
+  border-radius: 50%;
+}
+
+/**
+ * Styles for the tab container.
+ *
+ * Sets display to flex and centers content.
+ * 
+ * @selector .tab-container
+ * @property {display} display - Sets the display to flex.
+ * @property {justify-content} justify-content - Centers the content horizontally.
+ * @property {margin-bottom} margin-bottom - Sets the bottom margin to 20px.
+ */
+.tab-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/**
+ * Styles for tab buttons.
+ *
+ * Defines width, background color, border, padding, cursor, and margin.
+ * 
+ * @selector .tab-button
+ * @property {width} width - Sets the width of the tab button to 150px.
+ * @property {background-color} background-color - Sets the background color to #f1f1f1.
+ * @property {border} border - Removes the border.
+ * @property {padding} padding - Sets the padding to 10px 20px.
+ * @property {cursor} cursor - Sets the cursor to pointer.
+ * @property {margin} margin - Sets the margin to 0 5px.
+ */
+.tab-button {
+  width: 150px;
+  background-color: #f1f1f1;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+/**
+ * Styles for tab button hover state.
+ *
+ * Changes background color on hover.
+ * 
+ * @selector .tab-button:hover
+ * @property {background-color} background-color - Changes the background color to #ddd.
+ */
+.tab-button:hover {
+  background-color: #ddd;
+}
+
+/**
+ * Styles for tab content.
+ *
+ * Sets display to none by default and provides padding and margins.
+ * 
+ * @selector .tab-content
+ * @property {display} display - Hides the tab content by default.
+ * @property {padding} padding - Sets the padding to 20px.
+ * @property {margin-left} margin-left - Sets the left margin to 30%.
+ * @property {margin-right} margin-right - Sets the right margin to 30%.
+ */
+.tab-content {
+  display: none;
+  padding: 20px;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+/**
+ * Styles for labels.
+ *
+ * Defines width, text alignment, and float behavior.
+ * 
+ * @selector label
+ * @property {width} width - Sets the width of the label to 100px.
+ * @property {text-align} text-align - Aligns text to the left.
+ * @property {float} float - Floats the label to the left.
+ */
+label {
+  width: 100px;
+  text-align: left;
+  float: left;
+}
+
+/**
+ * Styles for input elements.
+ *
+ * Sets width and height for input fields.
+ * 
+ * @selector input
+ * @property {width} width - Sets the width of the input to 200px.
+ * @property {height} height - Sets the height of the input to 50px.
+ */
+input {
+    width: 200px;
+}
+
+/**
+ * Styles for update buttons.
+ *
+ * Defines width and height for the update button.
+ * 
+ * @selector .update
+ * @property {width} width - Sets the width of the update button to 100%.
+ * @property {height} height - Sets the height of the update button to 50px.
+ */
+.update {
+  width: 100%;
+  height: 50px;
+}
+
+/**
+ * Styles for labels in forms.
+ *
+ * Defines dimensions, background color, text color, and alignment.
+ * 
+ * @selector label
+ * @property {display} display - Uses flex display.
+ * @property {justify-content} justify-content - Centers content horizontally.
+ * @property {align-items} align-items - Centers content vertically.
+ * @property {width} width - Sets the width of the label to 150px.
+ * @property {height} height - Sets the height of the label to 50px.
+ * @property {background-color} background-color - Sets the background color to #3274d6.
+ * @property {color} color - Sets the text color to #ffffff.
+ */
+label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    background-color: #3274d6;
+    color: #ffffff;
+}
+
+/**
+ * Styles for input fields in forms.
+ *
+ * Sets dimensions, border, margin, and padding.
+ * 
+ * @selector input
+ * @property {width} width - Sets the width of the input to 310px.
+ * @property {height} height - Sets the height of the input to 50px.
+ * @property {border} border - Sets a 1px solid border with color #dee0e4.
+ * @property {margin-bottom} margin-bottom - Sets the bottom margin to 20px.
+ * @property {padding} padding - Adds 15px padding on the left and right.
+ */
+input {
+    width: 310px;
+    height: 50px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+/**
+ * Styles for the body element.
+ *
+ * Sets font family, margin, and padding.
+ * 
+ * @selector body
+ * @property {font-family} font-family - Sets the font family to Arial, sans-serif.
+ * @property {margin} margin - Removes default margin.
+ * @property {padding} padding - Removes default padding.
+ */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ * Styles for the navigation bar.
+ *
+ * Defines layout, padding, background color, and text color.
+ * 
+ * @selector .navbar
+ * @property {display} display - Uses flex display with column direction.
+ * @property {flex-direction} flex-direction - Sets flex direction to column.
+ * @property {align-items} align-items - Centers items horizontally.
+ * @property {padding} padding - Adds padding to the navbar.
+ * @property {background-color} background-color - Sets background color to #333.
+ * @property {color} color - Sets text color to white.
+ */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+/**
+ * Styles for the brand title in the navbar.
+ *
+ * Sets font size and margin.
+ * 
+ * @selector .brand-title
+ * @property {font-size} font-size - Sets the font size to 1.5rem.
+ * @property {margin-bottom} margin-bottom - Sets the bottom margin to 10px.
+ */
+.brand-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/**
+ * Styles for the navigation links container.
+ *
+ * Defines height, display, justification, and width.
+ * 
+ * @selector .navbar-links
+ * @property {height} height - Sets the height to 100%.
+ * @property {display} display - Uses flex display.
+ * @property {justify-content} justify-content - Centers content horizontally.
+ * @property {width} width - Sets the width to 100%.
+ */
+.navbar-links {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/**
+ * Styles for the unordered list within the navbar links.
+ *
+ * Removes margin, padding, and list style, and sets display to flex.
+ * 
+ * @selector .navbar-links ul
+ * @property {margin} margin - Removes margin.
+ * @property {padding} padding - Removes padding.
+ * @property {list-style} list-style - Removes list style.
+ * @property {display} display - Uses flex display.
+ */
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+
+/**
+ * Styles for list items within the navbar links.
+ *
+ * Adds padding on the left and right.
+ * 
+ * @selector .navbar-links li
+ * @property {padding} padding - Adds 0 20px padding.
+ */
+.navbar-links li {
+    padding: 0 20px;
+}
+
+/**
+ * Styles for anchor tags within the navbar links.
+ *
+ * Sets text decoration, color, and font size.
+ * 
+ * @selector .navbar-links a
+ * @property {text-decoration} text-decoration - Removes text decoration.
+ * @property {color} color - Sets text color to white.
+ * @property {font-size} font-size - Sets font size to 1rem.
+ */
+.navbar-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+/**
+ * Styles for the toggle button.
+ *
+ * Defines display, flex direction, cursor, and positioning.
+ * 
+ * @selector .toggle-button
+ * @property {display} display - Sets display to none by default.
+ * @property {flex-direction} flex-direction - Sets flex direction to column.
+ * @property {cursor} cursor - Sets cursor to pointer.
+ * @property {position} position - Sets position to absolute.
+ * @property {right} right - Positions the button 20px from the right.
+ */
+.toggle-button {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+}
+
+/**
+ * Styles for bars within the toggle button.
+ *
+ * Defines width, height, background color, and margin.
+ * 
+ * @selector .toggle-button .bar
+ * @property {width} width - Sets the width of the bar to 25px.
+ * @property {height} height - Sets the height of the bar to 3px.
+ * @property {background-color} background-color - Sets the background color to white.
+ * @property {margin} margin - Adds 4px margin vertically.
+ */
+.toggle-button .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/**
+ * Responsive styles for screen widths up to 768px.
+ *
+ * Adjusts the navbar layout and toggle button display for smaller screens.
+ * 
+ * @media (max-width: 768px)
+ * @selector .navbar
+ * @property {align-items} align-items - Aligns items to flex-start.
+ * 
+ * @selector .toggle-button
+ * @property {display} display - Sets display to flex.
+ * 
+ * @selector .navbar-links
+ * @property {display} display - Hides the navbar links by default.
+ * 
+ * @selector .navbar-links ul
+ * @property {width} width - Sets width to 100%.
+ * @property {flex-direction} flex-direction - Sets flex direction to column.
+ * 
+ * @selector .navbar-links li
+ * @property {text-align} text-align - Centers text alignment.
+ * @property {padding} padding - Adds 15px top and bottom padding.
+ * 
+ * @selector .navbar-links.active
+ * @property {display} display - Sets display to flex.
+ * @property {flex-direction} flex-direction - Sets flex direction to column.
+ * @property {width} width - Sets width to 100%.
+ */
+@media (max-width: 768px) {
+    .navbar {
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .navbar-links.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+/**
+ * Responsive styles for screen widths up to 600px.
+ *
+ * Adjusts the login container width for smaller screens.
+ * 
+ * @media only screen and (max-width: 600px)
+ * @selector .login
+ * @property {width} width - Sets width to 95%.
+ */
+@media only screen and (max-width: 600px) {
+  .login {
+    width: 95%;
+  }
+}

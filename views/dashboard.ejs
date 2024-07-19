@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+     * @section head
+     * 
+     * The head section of the HTML document.
+     * 
+     * @meta charset - Specifies the character encoding for the document.
+     * @meta name="viewport" - Ensures the page is responsive on different devices.
+     * @title - Sets the title of the page displayed in the browser tab.
+     * @link rel="stylesheet" - Links to the external CSS stylesheet.
+     -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!--
+     * @section nav
+     * 
+     * Navigation bar for the dashboard.
+     * 
+     * @div class="navbar" - Container for the navigation bar.
+     * @div class="brand-title" - Displays the title of the dashboard.
+     * @a class="toggle-button" - Button to toggle the navigation menu on smaller screens.
+     * @span class="bar" - Bars for the toggle button.
+     * @div class="navbar-links" - Container for navigation links.
+     * @ul - Unordered list for navigation links.
+     * @li - List items for each navigation link.
+     * @a - Anchor tags for navigation links.
+     */
+    -->
+
+    <nav class="navbar">
+        <div class="brand-title">Dashboard</div>
+        <a class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--
+     * @section user-info
+     * 
+     * Displays user information and welcome message.
+     * 
+     * @div - Container for user information.
+     * @img - User profile picture.
+     * @h1 - Welcome message for the user.
+     */
+    -->
+
+    <div align="center">
+        <br>
+        <img height="64" width="64" src="<%= user.picture %>">
+        <h1>Welcome, <%= user.name.first %></h1>
+    </div>
+    
+    <!--
+     * @section tabs
+     * 
+     * Container for tab buttons and tab content.
+     * 
+     * @div class="tab-container" - Container for tab buttons.
+     * @button class="tab-button" - Buttons to switch between tabs.
+     * @div class="tab-content" - Containers for tab content.
+     * @form - Form for updating user information.
+     */
+    -->
+
+    <div class="tab-container">
+        <button class="tab-button" onclick="showTab('tab1')">Balance</button>
+        <button class="tab-button" onclick="showTab('tab2')">Edit</button>
+    </div>
+    
+    <div class="tab-content" align="center" id="tab1">
+        <h1>Balance: </h1>
+        <p><%= user.balance %></p>
+    </div>
+    
+    <div class="tab-content" align="center" id="tab2" style="display: none;">
+        <form action="/update" method="post">
+            <input type="hidden" name="email" value="<%= user.email %>">
+            <br>
+            
+            <!--
+             * @section form-fields
+             * 
+             * Form fields for updating user information.
+             * 
+             * @label - Labels for form fields.
+             * @input - Input fields for user information.
+             * @button - Submit button for the form.
+             */
+            -->
+
+            <label for="picture">Picture URL:</label>
+            <input type="text" name="picture" value="<%= user.picture %>">
+            <br>
+            
+            <label for="age">Age:</label>
+            <input type="number" name="age" value="<%= user.age %>">
+            <br>
+            
+            <label for="eyeColor">Eye Color:</label>
+            <input type="text" name="eyeColor" value="<%= user.eyeColor %>">
+            <br>
+            
+            <label for="firstName">First Name:</label>
+            <input type="text" name="firstName" value="<%= user.name.first %>">
+            <br>
+            
+            <label for="lastName">Last Name:</label>
+            <input type="text" name="lastName" value="<%= user.name.last %>">
+            <br>
+            
+            <label for="company">Company:</label>
+            <input type="text" name="company" value="<%= user.company %>">
+            <br>
+            
+            <label for="password">Password:</label>
+            <input type="password" name="password" value="<%= user.password %>">
+            <br>
+            
+            <label for="phone">Phone:</label>
+            <input type="text" name="phone" value="<%= user.phone %>">
+            <br>
+            
+            <label for="address">Address:</label>
+            <input type="text" name="address" value="<%= user.address %>">
+            <br>
+            
+            <button class="update" type="submit">Update</button>
+        </form>
+    </div>
+    
+    <!--
+     * @section scripts
+     * 
+     * Links to external JavaScript files.
+     * 
+     * @script src - Links to the external JavaScript file.
+     */
+    -->
+    <script src="/script.js"></script>
+</body>
+</html>
+

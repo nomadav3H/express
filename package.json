@@ -1,0 +1,20 @@
+{
+  "name": "lowdb-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node test/app.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "esm": "^3.2.25",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "lowdb": "^3.0.0"
+  }
+}
