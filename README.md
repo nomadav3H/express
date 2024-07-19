@@ -18,12 +18,17 @@ This Node.js application provides a basic user authentication system with a dash
     ```npm install```
 
 
-3.  ** Run the Server***
+3. ** Run the Test **
+
+   ```npm test```
+
+
+4.  ** Run the Server***
 
    ```node app.js```
 
 
-4. ** Curl Commands for the api (example)**
+5. ** Curl Commands for the api (example)**
 
 curl -X POST https://localhost:3000/api/login \
      -H "Content-Type: application/json" \
