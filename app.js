@@ -105,7 +105,7 @@ app.get('/login', (req, res) => {
 });
 
 /**
- * API route for logging in.
+ * Post route for logging in.
  * Authenticates user and sets session.
  *
  * @route POST /login
@@ -237,18 +237,10 @@ app.get('/logout', (req, res) => {
  */
 app.post('/api/login', async (req, res) => {
   const { username, password } = req.body;
-  console.log('test', req.body)
-
   
-
-  if (username && password) {
-
-    
+  if (username && password) {  
     await db.read();
     const user = db.data.users.find(user => user.email === username && user.password === password);
-
-    //res.json({  user })
-
     if (user) {
       const accessToken = jwt.sign({ email: user.email }, JWT_SECRET, { expiresIn: '1h' });
       res.json({ accessToken });
